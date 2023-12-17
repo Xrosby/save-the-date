@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oridomi Project</title>
+    <!-- Include Oridomi library -->
+    <script src="https://oridomi.com/oridomi.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+    <div id="container">
+
+        <div class="card">
+            <div id="save-the-date-container" style="display:flex">
+                <h1 id="save-header-save">SAVE</h1>
+                <h1 id="save-header-the">the</h1>
+                <h1 id="save-header-date">DATE</h1>
+            </div>
+            <div id="balloon" style="height:80px;">
+                <img style="height:100%;width:100%;" src="hot-air-balloon-21225.png" />
+            </div>
+            <div id="cloud1" style="height: 40px">
+                <img style="height:100%;width:100%;" src="cloud.png" />
+            </div>
+            <div id="cloud2" style="height:30px">
+                <img style="height:100%;width:100%;" src="cloud.png" />
+            </div>
+            <div id="cloud3" style="height:60px">
+                <img style="height:100%;width:100%;" src="cloud.png" />
+            </div>
+            <div>
+                <div id="date">
+                    <span style="z-index: 105;border-bottom:1px solid black; margin-bottom: 10px;">17</span>
+
+                    <span style="z-index: 105;border-bottom:1px solid black; margin-bottom: 10px;">08</span>
+
+                    <span style="z-index: 105;">24</span>
+
+                </div>
+                <div id="names" style="display:flex">
+                    <span style="z-index: 105;">Mads</span>
+                    <div class="ring-container">
+                        <div style="z-index: 105;" class="ring"></div>
+                        <div style="z-index: 105;" class="ring2"></div>
+                    </div>
+                    <span style="z-index: 105;">Nica</span>
+                </div>
+
+            </div>
+            <!--
+            <div style="height:120px">
+                <img style="height:100%;width:100%;" src="hot-air-balloon-21225.png" />
+            </div>
+-->
+
+
+            <div id="formal-invitation">
+                <span style="z-index: 105;">Castello di San Basilio, Pisticci</span>
+                <span style="z-index: 105;font-size: 0.5rem;margin-top:10px">Seguira' invito ufficiale</span>
+            </div>
+
+            <div id="ocean">
+                <img style="height:100%;width:100%" src="ocean3.png" />
+            </div>
+
+            <!--    <div class="centered-dot-container">
+                    <div class="centered-dot"></div>
+                </div>-->
+        </div>
+
+    </div>
+
+    <script>
+        function floatAnimation(top) {
+            $('#balloon').animate({
+                top: top,
+                left: window.innerWidth - 80
+            }, 20000, 'swing', function () {
+                // Animation complete, reverse direction
+                $('#balloon').animate({
+                    left: 0,
+                    top: top + 50,
+                }, 20000, 'swing', () => floatAnimation(top + 50));
+            });
+        }
+
+        floatAnimation(100); // Start the animation
+
+    </script>
+</body>
+
+</html>
