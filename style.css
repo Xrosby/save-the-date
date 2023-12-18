@@ -80,7 +80,7 @@ body {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    border: 3px solid goldenrod;
+    border: 2px solid goldenrod;
     /* Adjust color as needed */
     position: absolute;
     top: 50%;
@@ -92,7 +92,7 @@ body {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    border: 3px solid goldenrod;
+    border: 2px solid goldenrod;
     /* Adjust color as needed */
     position: absolute;
     top: 50%;
