@@ -74,6 +74,8 @@
 
     <script>
         function floatAnimation(top) {
+
+            const bobbingAmplitude = 50;
             // Animate the balloon's top and left properties with a bobbing effect
             $('#balloon').animate({
                 top: top,
@@ -83,8 +85,11 @@
                 easing: 'swing',
                 step: function (now, fx) {
                     // Add a sinusoidal bobbing effect to the top property
+                    console.log(fx.prop)
                     if (fx.prop === 'top') {
-                        $(this).css('top', top + 10 * Math.sin(now / 100));
+                        $(this).css('top', top + bobbingAmplitude * Math.sin(now / 100));
+                    } else {
+                        $(this).css('bottom', top + bobbingAmplitude * Math.sin(now / 100));
                     }
                 },
                 complete: function () {
@@ -99,7 +104,9 @@
                         step: function (now, fx) {
                             // Add a sinusoidal bobbing effect to the top property
                             if (fx.prop === 'top') {
-                                $(this).css('top', top + 10 * Math.sin(now / 100));
+                                $(this).css('top', top + bobbingAmplitude * Math.sin(now / 100));
+                            } else {
+                                $(this).css('bottom', top + bobbingAmplitude * Math.sin(now / 100));
                             }
                         },
                         complete: () => floatAnimation(top + 50)
