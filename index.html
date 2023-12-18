@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oridomi Project</title>
+    <title>Save the Date</title>
     <!-- Include Oridomi library -->
     <script src="https://oridomi.com/oridomi.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
@@ -22,7 +22,6 @@
 
 <body>
     <div id="container">
-
         <div class="card">
             <div id="save-the-date-container" style="display:flex">
                 <h1 id="save-header-save">SAVE</h1>
@@ -60,44 +59,85 @@
                 </div>
 
             </div>
-            <!--
-            <div style="height:120px">
-                <img style="height:100%;width:100%;" src="hot-air-balloon-21225.png" />
-            </div>
--->
-
-
             <div id="formal-invitation">
                 <span style="z-index: 105;">Castello di San Basilio, Pisticci</span>
-                <span style="z-index: 105;font-size: 0.5rem;margin-top:10px">Seguira' invito ufficiale</span>
+                <span id="message" style="z-index: 105;font-size: 0.5rem;margin-top:1rem"></span>
             </div>
 
-            <div id="ocean">
-                <img style="height:100%;width:100%" src="ocean3.png" />
+            <div id="hills">
+                <img style="height:100%;width:100%" src="hills.png" />
             </div>
 
-            <!--    <div class="centered-dot-container">
-                    <div class="centered-dot"></div>
-                </div>-->
         </div>
 
     </div>
 
     <script>
         function floatAnimation(top) {
+            // Animate the balloon's top and left properties with a bobbing effect
             $('#balloon').animate({
                 top: top,
-                left: window.innerWidth - 80
-            }, 20000, 'swing', function () {
-                // Animation complete, reverse direction
-                $('#balloon').animate({
-                    left: 0,
-                    top: top + 50,
-                }, 20000, 'swing', () => floatAnimation(top + 50));
+                left: window.innerWidth - 100
+            }, {
+                duration: 20000,
+                easing: 'swing',
+                step: function (now, fx) {
+                    // Add a sinusoidal bobbing effect to the top property
+                    if (fx.prop === 'top') {
+                        $(this).css('top', top + 10 * Math.sin(now / 100));
+                    }
+                },
+                complete: function () {
+                    // Animation complete, reverse direction
+                    // Animate the balloon to the left and slightly down
+                    $('#balloon').animate({
+                        left: 0,
+                        top: top + 50,
+                    }, {
+                        duration: 20000,
+                        easing: 'swing',
+                        step: function (now, fx) {
+                            // Add a sinusoidal bobbing effect to the top property
+                            if (fx.prop === 'top') {
+                                $(this).css('top', top + 10 * Math.sin(now / 100));
+                            }
+                        },
+                        complete: () => floatAnimation(top + 50)
+                    });
+                }
             });
         }
 
-        floatAnimation(100); // Start the animation
+        // Start the animation with an initial top value of 100
+        floatAnimation(100);
+
+
+
+        async function getCountry() {
+            let country = 'Italy';
+            try {
+                const response = await fetch('http://api.ipstack.com/check?access_key=aff86d7313e111cac1330a4236d5e53e');
+                const data = await response.json();
+                country = (data?.country_name || 'Italy').toLowerCase()
+            } catch (error) {
+                console.error('Error fetching data from ipstack API:', error);
+            }
+            return 'denmark'//country;
+        }
+
+        const setFormalMessage = () => {
+            const country = getCountry().then((country) => {
+                const danishMessage = 'Official invitation foelger'
+                const italianMessage = 'Seguira\' invito ufficiale'
+
+                const message = country === 'italy' ? italianMessage : danishMessage;
+
+                const formalMessageContainer = document.getElementById("message");
+                formalMessageContainer.innerText = message;
+            })
+        }
+
+        setFormalMessage()
 
     </script>
 </body>

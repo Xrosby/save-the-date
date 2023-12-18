@@ -1,36 +1,4 @@
 @font-face {
-    font-family: typewriter;
-    src: url(Debora_Celina.ttf);
-}
-
-@font-face {
-    font-family: curly;
-    src: url(MilestoneFreeVersion-Script.otf)
-}
-
-
-
-@font-face {
-    font-family: biospace;
-    src: url(Biospace.ttf.ttf)
-}
-
-@font-face {
-    font-family: edition;
-    src: url(EDITION_.TTF)
-}
-
-@font-face {
-    font-family: newyork;
-    src: url(NewYork\ PERSONAL\ USE.otf)
-}
-
-@font-face {
-    font-family: optimus;
-    src: url(OptimusPrinceps.ttf)
-}
-
-@font-face {
     font-family: vogue;
     src: url(Vogue.ttf)
 }
@@ -39,18 +7,6 @@
     font-family: adelia;
     src: url(adelia.otf)
 }
-
-
-@font-face {
-    font-family: golden;
-    src: url(Golden.otf)
-}
-
-@font-face {
-    font-family: southland;
-    src: url(Southland.ttf)
-}
-
 
 #date {
     font-family: vogue;
@@ -62,7 +18,6 @@
 }
 
 #save-the-date-container {
-
     font-family: vogue;
     font-size: 1rem;
     align-items: center;
@@ -71,8 +26,8 @@
 
 #save-header-the {
     z-index: 999;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 1rem;
+    margin-right: 1rem;
     font-size: 1.4rem;
     font-weight: 100;
     font-family: adelia;
@@ -80,24 +35,22 @@
 
 #save-header-save {
     z-index: 999;
-    padding-top: 7px;
-    padding-right: 15px;
+    padding-top: 0.2rem;
+    padding-right: 1rem;
 }
 
 #save-header-date {
     z-index: 999;
-    padding-top: 7px
+    padding-top: 0.2rem
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 0px;
+
 }
 
 #container {
-    padding: 20px;
-    height: 91vh;
+    height: 100vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -107,8 +60,7 @@ body {
 
 #names {
     font-size: 1.2rem;
-    ;
-    margin-top: 20px;
+    margin-top: 1rem;
     font-family: adelia;
 }
 
@@ -146,15 +98,6 @@ body {
     /* Rotate the second ring */
 }
 
-
-#flower {
-    height: 20px;
-    width: 20px;
-    padding-left: 5px;
-    padding-right: 5px;
-
-}
-
 #cloud1 {
     z-index: 100;
     position: fixed;
@@ -166,13 +109,13 @@ body {
     z-index: 100;
     position: fixed;
     top: 20vh;
-    left: 56vw
+    left: 63vw
 }
 
 #cloud3 {
     z-index: 103;
     position: fixed;
-    top: 8vh;
+    top: 12vh;
     left: 35vw
 }
 
@@ -183,21 +126,10 @@ body {
     left: 0;
 }
 
-#ocean {
-    left: 0;
-}
 
-#sun {
-    z-index: 1;
-    width: 70px;
-    height: 70px;
-    position: absolute;
-    top: 80px;
-    /* Adjust to hide part of the sun in the top corner */
-    right: 10px;
-    /* Adjust to hide part of the sun in the top corner */
+#hills {
+    z-index: 103;
 }
-
 
 .card {
     position: absolute;
@@ -208,13 +140,14 @@ body {
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    height: 100%;
-    width: 100%;
+    height: 95vh;
+    width: 90vw;
     color: black;
     font-weight: bold;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
     /* Optional shadow for a more realistic look */
 }
+
 
 #formal-invitation {
     font-family: vogue;
