@@ -121,7 +121,7 @@
                 alert(data.country_name)
                 country = (data?.country_name || 'Italy').toLowerCase()
             } catch (error) {
-                alert(error)
+                alert('Error fetching data from ipstack API:' + JSON.stringify(error))
                 console.error('Error fetching data from ipstack API:', error);
             }
 
@@ -133,7 +133,7 @@
                 const danishMessage = 'Official invitation foelger'
                 const italianMessage = 'Seguira\' invito ufficiale'
 
-                const message = country === 'italy' ? italianMessage : danishMessage;
+                const message = country === 'denmark' ? danishMessage : italianMessage;
 
                 const formalMessageContainer = document.getElementById("message");
                 formalMessageContainer.innerText = message;
