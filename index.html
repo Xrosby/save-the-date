@@ -28,7 +28,7 @@
                 <h1 id="save-header-the">the</h1>
                 <h1 id="save-header-date">DATE</h1>
             </div>
-            <div id="balloon" style="height:5rem; width: 5rem">
+            <div id="balloon">
                 <img style="height:100%;width:100%;" src="hot-air-balloon-21225.png" />
             </div>
             <div id="cloud1" style="height: 3rem; width: 5rem">
@@ -61,7 +61,7 @@
             </div>
             <div id="formal-invitation">
                 <span style="z-index: 105;">Castello di San Basilio, Pisticci</span>
-                <span id="message" style="z-index: 105;font-size: 0.5rem;margin-top:1rem"></span>
+                <span id="message" style="z-index: 105;margin-top:1rem"></span>
             </div>
 
             <div id="hills">
@@ -84,8 +84,6 @@
                 duration: 20000,
                 easing: 'swing',
                 step: function (now, fx) {
-                    // Add a sinusoidal bobbing effect to the top property
-                    console.log(fx.prop)
                     if (fx.prop === 'top') {
                         $(this).css('top', top + bobbingAmplitude * Math.sin(now / 100));
                     } else {
