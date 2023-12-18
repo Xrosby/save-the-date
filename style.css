@@ -131,7 +131,10 @@ body {
 
 
 #hills {
+    position: absolute;
     z-index: 103;
+    bottom: -10vw;
+    width: 110vw;
 }
 
 .card {
@@ -156,4 +159,5 @@ body {
     font-family: vogue;
     display: flex;
     flex-direction: column;
+    margin-bottom: 8rem;
 }
