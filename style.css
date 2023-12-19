@@ -103,21 +103,21 @@ body {
 
 #cloud1 {
     z-index: 100;
-    position: fixed;
+    position: absolute;
     top: 18vh;
     left: 20vw;
 }
 
 #cloud2 {
     z-index: 100;
-    position: fixed;
+    position: absolute;
     top: 20vh;
     left: 63vw
 }
 
 #cloud3 {
     z-index: 103;
-    position: fixed;
+    position: absolute;
     top: 12vh;
     left: 35vw
 }
