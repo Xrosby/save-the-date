@@ -125,10 +125,100 @@ body {
 #balloon {
     z-index: 102;
     position: absolute;
-    top: 8vh;
+    top: 24vh;
     left: 0;
     height: 8rem;
     width: 8rem
+}
+
+
+.stars {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 000vw;
+    height: 100vh;
+    transition: all 10s linear;
+}
+
+.star {
+    position: absolute;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.8;
+}
+
+.blink {
+    animation: blink ease-in-out infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.star-0 {
+    height: 0.5px;
+    width: 0.5px;
+}
+
+.star-1 {
+    height: 1px;
+    width: 1px;
+}
+
+.star-2 {
+    height: 1.5px;
+    width: 1.5px;
+}
+
+.star-3 {
+    height: 2px;
+    width: 2px;
+}
+
+.star-4 {
+    height: 2.5px;
+    width: 2.5px;
+    box-shadow: 0px 0px 6px 1px rgba(255, 255, 255, 0.5);
+}
+
+.star-5 {
+    height: 2.5px;
+    width: 2.5px;
+    box-shadow: 0px 0px 6px 1px rgba(255, 255, 255, 0.7);
+}
+
+.stars-cross {
+    position: absolute;
+    top: 10vh;
+    left: 0px;
+    width: 120vw;
+    height: 20vh;
+    transform: rotate(20deg);
+    transform-origin: top left;
+}
+
+.stars-cross-aux {
+    position: absolute;
+    top: 0vh;
+    left: 10vw;
+    width: 120vw;
+    height: 10vh;
+    transform: rotate(20deg);
+    transform-origin: top left;
+}
+
+.stars-cross>.blur,
+.stars-cross-aux>.blur {
+    position: absolute;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 1;
+    filter: blur(15px);
+    width: 5px;
+    height: 10px;
 }
 
 
@@ -139,7 +229,7 @@ body {
     width: 110vw;
 }
 
-.card {
+#card {
     position: absolute;
     overflow: hidden;
     background-color: #a2d5ff;
