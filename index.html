@@ -290,7 +290,7 @@
         function setDynamicBackgroundColor() {
             // Get the current time
             const now = new Date();
-            const hours = now.getHours();
+            const hours = 21//now.getHours();
             const minutes = now.getMinutes();
             const seconds = now.getSeconds();
 
@@ -411,21 +411,6 @@
                 duration: 20000,
                 easing: 'swing',
                 step: function (now, fx) {
-                    const balloon = $('#balloon') //.position();
-                    const firstNumber = $('#number-1')
-
-                    function isColliding($element1, $element2) {
-                        // Get positions and dimensions of the elements
-                        var rect1 = $element1[0].getBoundingClientRect();
-                        var rect2 = $element2[0].getBoundingClientRect();
-
-                        return (
-                            rect1.x < rect2.x + rect2.width &&
-                            rect1.x + rect1.width - 35 > rect2.x &&
-                            rect1.y < rect2.y + rect2.height &&
-                            rect1.y + rect1.height > rect2.y
-                        );
-                    }
                     if (fx.prop === 'top') {
                         $(this).css('top', top + bobbingAmplitude * Math.sin(now / 100));
                     } else {
@@ -450,7 +435,27 @@
                     });
                 }
             });
+            
         }
+
+        /*
+
+          const balloon = $('#balloon') //.position();
+                    const firstNumber = $('#number-1')
+
+                    function isColliding($element1, $element2) {
+                        // Get positions and dimensions of the elements
+                        var rect1 = $element1[0].getBoundingClientRect();
+                        var rect2 = $element2[0].getBoundingClientRect();
+
+                        return (
+                            rect1.x < rect2.x + rect2.width &&
+                            rect1.x + rect1.width - 35 > rect2.x &&
+                            rect1.y < rect2.y + rect2.height &&
+                            rect1.y + rect1.height > rect2.y
+                        );
+                    }
+        */
 
         // Start the animation with an initial top value of 100
         floatAnimation(100);
