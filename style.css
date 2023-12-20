@@ -8,6 +8,16 @@
     src: url(adelia.otf)
 }
 
+@font-face {
+    font-family: autography;
+    src: url(autography/Autography.otf)
+}
+
+@font-face {
+    font-family: handwind;
+    src: url(handwind/Handwind.otf)
+}
+
 #date {
     font-family: vogue;
     display: flex;
@@ -30,7 +40,7 @@
     margin-right: 1rem;
     font-size: 2rem;
     font-weight: 100;
-    font-family: adelia;
+    font-family: autography;
 }
 
 #save-header-save {
@@ -62,7 +72,7 @@ body {
     z-index: 100;
     font-size: 2.5rem;
     margin-top: 1rem;
-    font-family: vogue;
+    font-family: autography;
     display: flex;
     justify-content: center;
     align-items: center;
