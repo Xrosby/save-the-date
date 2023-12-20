@@ -15,7 +15,7 @@
 
 @font-face {
     font-family: handwind;
-    src: url(handwind/Handwind.otf)
+    src: url(handwind/Handwind.ttf)
 }
 
 #date {
@@ -38,9 +38,9 @@
     z-index: 999;
     margin-left: 1rem;
     margin-right: 1rem;
-    font-size: 2rem;
+    font-size: 4rem;
     font-weight: 100;
-    font-family: autography;
+    font-family: handwind;
 }
 
 #save-header-save {
@@ -70,9 +70,9 @@ body {
 
 #names {
     z-index: 100;
-    font-size: 2.5rem;
+    font-size: 4rem;
     margin-top: 1rem;
-    font-family: autography;
+    font-family: handwind;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -288,11 +288,11 @@ body {
     }
 
     #save-header-the {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     #names {
-        font-size: 1rem;
+        font-size: 2rem;
     }
 
     #formal-invitation {
