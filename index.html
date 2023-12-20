@@ -257,7 +257,6 @@
             // Calculate brightness (luma)
             return (0.299 * r + 0.587 * g + 0.114 * b) / 255;
         }
-
         // Function to calculate sunset gradient color based on time
         function calculateSunsetColor(hours, minutes, seconds) {
             // Calculate the total number of seconds since 6 PM
@@ -267,8 +266,8 @@
             const timePercentage = Math.min(Math.max((totalSeconds - 18 * 3600) / (6 * 3600), 0), 1);
 
             // Adjust the color values based on your desired sunset gradient
-            const sunsetRed = Math.round(255 - timePercentage * 100);
-            const sunsetGreen = Math.round(timePercentage * 200);
+            const sunsetRed = Math.round(255 - timePercentage * 100); // Adjusted to make it more yellowish
+            const sunsetGreen = Math.round(150 + timePercentage * 100); // Adjusted to make it more orangish
             const sunsetBlue = 0;
 
             return `rgb(${sunsetRed}, ${sunsetGreen}, ${sunsetBlue})`;
@@ -333,13 +332,24 @@
                     const h = `-${Math.floor(sunsetContainerHeight)}vh`
                     console.log(h)
                     //$('#sunset-container').css('background', `linear-gradient(to top, ${sunsetColor} ${0}%, ${interpolatedColor} 100%)`);
+                    $('#sunset-container').css({
+                        'display': 'block',
+                        'bottom': h,
+                        'width': '140vw',
+                        'height': '40vh',
+                        'border-radius': '50%',
+                        'box-shadow': `-10px -10px 40px 5px #fff, -0px 100px 80px 200px  #fff, -0px -30px 60px 20px  #fff, -0px -50px 500px 50px  #fff`,
+                        'background-color': '#ffc1a0',
+                        'z-index': '1',
+                        'left': '10vw'  // Added left property as per your example
+                    });
                     $('#sunset-container2').css({
                         'display': 'block',
                         'bottom': h,
                         'width': '140vw',
-                        'height': '200px',
+                        'height': '35vh',
                         'border-radius': '50%',
-                        'box-shadow': `-0px -10px 40px 5px ${sunsetColor}, -0px -10px 80px 20px ${sunsetColor}, -0px -30px 60px 20px #d27ba6, -0px -50px 150px 75px #7d4d8a`,
+                        'box-shadow': `-0px -10px 40px 5px ${sunsetColor}, -0px -10px 80px 20px ${sunsetColor}, -0px -100px 500px 20px #d27ba6, -0px -50px 150px 75px #7d4d8a`,
                         'background-color': '#ffc1a0',
                         'z-index': '1',
                         'left': '10vw'  // Added left property as per your example
@@ -360,7 +370,7 @@
             const heightPercentage = (totalSeconds / (24 * 3600)) * 80;
             const res = Math.max(100 - heightPercentage, 1);
             //console.log(res)
-            return 100 - (res + 35)
+            return 100 - (res + 30)
         }
 
         const setClouds = () => {
@@ -435,7 +445,7 @@
                     });
                 }
             });
-            
+
         }
 
         /*
