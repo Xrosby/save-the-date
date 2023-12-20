@@ -18,6 +18,11 @@
     src: url(handwind/Handwind.ttf)
 }
 
+@font-face {
+    font-family: retro;
+    src: url(retro_signature/RetroSignature.otf)
+}
+
 #date {
     font-family: vogue;
     display: flex;
@@ -36,11 +41,12 @@
 
 #save-header-the {
     z-index: 999;
+    padding-bottom: 12px;
     margin-left: 1rem;
     margin-right: 1rem;
     font-size: 4rem;
     font-weight: 100;
-    font-family: handwind;
+    font-family: retro;
 }
 
 #save-header-save {
@@ -72,7 +78,7 @@ body {
     z-index: 100;
     font-size: 4rem;
     margin-top: 1rem;
-    font-family: handwind;
+    font-family: retro;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -288,11 +294,11 @@ body {
     }
 
     #save-header-the {
-        font-size: 1.5rem;
+        font-size: 3rem;
     }
 
     #names {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     #formal-invitation {
