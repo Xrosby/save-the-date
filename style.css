@@ -125,7 +125,7 @@ body {
 #balloon {
     z-index: 102;
     position: absolute;
-    top: 24vh;
+    top: 8vh;
     left: 0;
     height: 8rem;
     width: 8rem
