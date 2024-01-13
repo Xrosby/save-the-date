@@ -8,6 +8,11 @@
     src: url(adelia.otf)
 }
 
+@font-face {
+    font-family: cinzel;
+    src: url(cinzel/Cinzel-Bold.otf)
+}
+
 #date {
     font-family: vogue;
     display: flex;
@@ -235,6 +240,7 @@ body {
 }
 
 #message {
+    font-family: cinzel;
     font-size: 1.4rem;
 }
 
