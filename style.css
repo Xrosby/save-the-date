@@ -8,11 +8,6 @@
     src: url(adelia.otf)
 }
 
-@font-face {
-    font-family: cinzel;
-    src: url(cinzel/Cinzel-Bold.otf)
-}
-
 #date {
     font-family: vogue;
     display: flex;
@@ -237,11 +232,10 @@ body {
     flex-direction: column;
     font-size: 2rem;
     margin-bottom: 14rem;
-    padding-bottom: 2rem;
 }
 
 #message {
-    font-family: cinzel;
+    font-family: adelia;
     font-size: 1.4rem;
 }
 
@@ -254,6 +248,8 @@ body {
     }
 
     #hills {
+        position: absolute;
+        z-index: 103;
         bottom: -5vh;
         width: 110vw;
     }
