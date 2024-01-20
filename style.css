@@ -253,7 +253,7 @@ body {
     #hills {
         position: absolute;
         z-index: 103;
-        bottom: -5vh;
+        bottom: -1vh;
         width: 110vw;
     }
 
