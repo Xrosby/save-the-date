@@ -246,14 +246,14 @@ body {
 @media only screen and (max-width: 600px) and (min-height: 600px) {
 
     #balloon {
-        height: 6rem;
-        width: 6rem
+        height: 80px;
+        width: 80px
     }
 
     #hills {
         position: absolute;
         z-index: 103;
-        bottom: -1vh;
+        bottom: -5px;
         width: 110vw;
     }
 
