@@ -219,6 +219,7 @@ body {
     }
 
     #date {
+        margin-top: 5.5vh;
         font-size: 2rem;
     }
 
@@ -285,6 +286,7 @@ body {
     }
 
     #date {
+        margin-top: 8.5dvh;
         font-size: 2.7rem;
     }
 
@@ -302,7 +304,7 @@ body {
 
     #formal-invitation {
         font-size: 1.3rem;
-        margin-bottom: 6rem;
+        margin-bottom: 3rem;
     }
 
     #message {
@@ -314,6 +316,11 @@ body {
 
 /* Responsive font sizes for smaller screens */
 @media only screen and (max-width: 1024px) and (min-height: 750px) {
+
+
+    #date {
+        margin-top: 5.5dvh
+    }
 
     #balloon {
         height: 100px;

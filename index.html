@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Save the Date</title>
-    <!-- Include Oridomi library -->
-    <script src="https://oridomi.com/oridomi.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
     <script src="dynamics.js"></script>
@@ -26,9 +24,6 @@
 
             <div id="stars" class="stars"></div>
 
-
-            <div style="position:fixed;bottom:-30vh; width:100vw;height:80vh;" id="sunset-container"></div>
-            <div style="position:fixed;bottom:-30vh;left:10vw; width:80vw;height:80vh;" id="sunset-container2"></div>
 
             <div id="save-the-date-container" style="display:flex">
                 <h1 class="text" id="save-header-save">SAVE</h1>
@@ -87,11 +82,6 @@
 
 
     <script>
-
-        //setDynamicElements()
-        //setInterval(setDynamicElements, 1000)
-
-
         function floatAnimation(top) {
             let tipped = false;
 
@@ -131,58 +121,8 @@
 
         }
 
-        /*
-
-          const balloon = $('#balloon') //.position();
-                    const firstNumber = $('#number-1')
-
-                    function isColliding($element1, $element2) {
-                        // Get positions and dimensions of the elements
-                        var rect1 = $element1[0].getBoundingClientRect();
-                        var rect2 = $element2[0].getBoundingClientRect();
-
-                        return (
-                            rect1.x < rect2.x + rect2.width &&
-                            rect1.x + rect1.width - 35 > rect2.x &&
-                            rect1.y < rect2.y + rect2.height &&
-                            rect1.y + rect1.height > rect2.y
-                        );
-                    }
-        */
-
-        // Start the animation with an initial top value of 100
         floatAnimation(100);
 
-
-
-        async function getCountry() {
-            let country = 'italy';
-            try {
-                const response = await fetch('http://api.ipstack.com/check?access_key=aff86d7313e111cac1330a4236d5e53e');
-                const data = await response.json();
-                //alert(data.country_name)
-                country = (data?.country_name || 'Italy').toLowerCase()
-            } catch (error) {
-                //alert('Error fetching data from ipstack API:' + JSON.stringify(error))
-                console.error('Error fetching data from ipstack API:', error);
-            }
-
-            return country;
-        }
-
-        const setFormalMessage = () => {
-            const country = getCountry().then((country) => {
-                const danishMessage = 'Official invitation foelger'
-                const italianMessage = 'Seguira\' invito ufficiale'
-
-                const message = country === 'denmark' ? danishMessage : italianMessage;
-
-                const formalMessageContainer = document.getElementById("message");
-                formalMessageContainer.innerText = message;
-            })
-        }
-
-        //setFormalMessage()
 
     </script>
 </body>
