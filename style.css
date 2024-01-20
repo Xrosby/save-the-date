@@ -237,7 +237,7 @@ body {
 
     #formal-invitation {
         font-size: 1.2rem;
-        margin-bottom: 6rem;
+        margin-bottom: 3rem;
     }
 
     #message {
@@ -286,7 +286,7 @@ body {
     }
 
     #date {
-        margin-top: 8.5dvh;
+        margin-top: 5.5dvh;
         font-size: 2.7rem;
     }
 
