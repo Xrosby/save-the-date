@@ -298,11 +298,96 @@ body {
     }
 
     #formal-invitation {
-        font-size: 1rem;
+        font-size: 1.2rem;
         margin-bottom: 6rem;
     }
 
     #message {
-        font-size: 0.6rem;
+        font-size: 0.9rem;
     }
+}
+
+
+/* Responsive font sizes for smaller screens */
+@media only screen and (max-width: 600px) and (min-height: 700px) {
+
+    #balloon {
+        height: 100px;
+        width: 100px
+    }
+
+    #hills {
+        position: absolute;
+        z-index: 103;
+        bottom: -5px;
+        width: 110vw;
+    }
+
+    .ring,
+    .ring2 {
+        width: 15px;
+        height: 15px;
+    }
+
+    .ring-container {
+        padding-top: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+        position: relative;
+    }
+
+
+    .ring {
+        border: 2px solid goldenrod;
+        left: 20px;
+    }
+
+    .ring2 {
+        border: 2px solid goldenrod;
+        left: 10px;
+    }
+
+    #date {
+        font-size: 3rem;
+    }
+
+    #save-the-date-container {
+        font-size: 1.2rem;
+    }
+
+    #save-header-the {
+        font-size: 1.5rem;
+    }
+
+    #names {
+        font-size: 1.4rem;
+    }
+
+    #formal-invitation {
+        font-size: 1.3rem;
+        margin-bottom: 6rem;
+    }
+
+    #message {
+        font-size: 1.1rem;
+    }
+}
+
+
+
+/* Responsive font sizes for smaller screens */
+@media only screen and (max-width: 1024px) and (min-height: 750px) {
+
+    #balloon {
+        height: 100px;
+        width: 100px
+    }
+
+    #hills {
+        position: absolute;
+        z-index: 103;
+        bottom: -5px;
+        width: 110vw;
+    }
+
 }
