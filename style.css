@@ -15,7 +15,7 @@
     flex-direction: column;
     font-size: 4rem;
     z-index: 104;
-    padding-top:5vh;
+    padding-top:5.5vh;
 }
 
 #save-the-date-container {
@@ -302,6 +302,6 @@ body {
     }
 
     #message {
-        font-size: 0.4rem;
+        font-size: 0.6rem;
     }
 }
