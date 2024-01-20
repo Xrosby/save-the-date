@@ -132,8 +132,8 @@ body {
     position: absolute;
     top: 8vh;
     left: 0;
-    height: 12rem;
-    width: 8rem
+    height: 200px;
+    width: 200px;
 }
 
 
@@ -207,7 +207,7 @@ body {
 #hills {
     position: absolute;
     z-index: 103;
-    bottom: -30vh;
+    bottom: -100px;
     width: 110vw;
 }
 
